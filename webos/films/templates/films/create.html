@@ -1,0 +1,26 @@
+{% extends 'main/temp.html' %}
+
+{% block title %}Форма по добавлению{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="text-align: center; margin-top: 20px; font-weight: bold; color: white">Форма по добавлению</h1><br>
+        <form enctype="multipart/form-data" method="post" style="color: aliceblue">
+            {% csrf_token %}
+            {{ form.Type }}<br>
+            {{ form.Name_of_film }}<br>
+            {{ form.Image_of_film }}<br><br>
+            {{ form.Image_name_of_film }}<br><br>
+            {{ form.Trailer_of_film }}<br><br>
+            {{ form.Video_of_film }}<br><br>
+            {{ form.Category }}<br>
+            {{ form.Director }}<br>
+            {{ form.Time }}<br>
+            {{ form.Year }}<br>
+            {{ form.Actors }}<br>
+            {{ form.Description }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit"> Добавить</button>
+        </form>
+    </div>
+{% endblock %}

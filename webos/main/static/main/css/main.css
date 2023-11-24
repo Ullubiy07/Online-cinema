@@ -1,0 +1,103 @@
+body {
+    background: #202020;
+}
+
+main .mainline {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: grey;
+    font-size: 25px;
+    margin-left: 50px;
+    display: block;
+    position: relative;
+    float: left;
+    top: 30%;
+    transition: 500ms;
+}
+
+header a:hover {    /*Плавный переход для: Главная, про меня, контакты*/
+    color: red;
+    transform: scale(1.1);
+}
+
+.main_header{
+    background: black;
+    height: 120px;
+}
+
+.main_header img {
+    float: left;
+    margin: 35px auto auto 40px;
+}
+
+form {
+    margin-left: 40%;
+    width: 500px;
+    height: 390px;
+    padding: 20px;
+}
+
+/* Картинки фильмов */
+.image-preview {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: 3%;
+    transition: 600ms;
+}
+
+.image-preview:hover {
+    transform: scale(1.1);
+}
+
+.video_of_film {
+    float: left;
+    width: 50%;
+    margin: 100px auto 100px 66px;
+}
+
+.name_of_film {
+    position: absolute;
+    top: 150px;
+    left: 950px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.type_and_time {
+    position: absolute;
+    left: 1000px;
+    top: 300px;
+    font-size: 20px;
+    color: white;
+}
+
+.edit_and_delete_buttons {
+    position:absolute;
+    bottom: 100px;
+    left: 100px;
+    margin-right: 40px;
+}
+
+.description {
+    position: absolute;
+    left: 900px;
+    right: 80px;
+    top: 375px;
+    font-size: 20px;
+    color: white;
+}
+
+.search_field {
+    position: fixed;
+    left: 580px;
+    top: 25px;
+}

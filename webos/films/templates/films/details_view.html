@@ -1,0 +1,20 @@
+{% extends 'main/temp.html' %}
+
+{% block title %}Фильмы{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="name_of_film">{{ my_film.Name_of_film }}</div>
+        <div class="type_and_time">{{ my_film.Category }}, {{ my_film.Time }}, ({{ my_film.Year }})</div>
+        <div class="description">{{ my_film.Description }}</div>
+    </div>
+    <div>
+        <video autoplay="autoplay" controls="controls" class="video_of_film">
+            <source src="{{ my_film.Trailer_of_film.url }}" type="video/mp4"/>
+        </video>
+    </div>
+    <div class="edit_and_delete_buttons">
+        <a href="{% url 'films_delete' my_film.id %}" class="btn btn-danger"> Удалить</a>
+        <a href="{% url 'films_update' my_film.id %}" class="btn btn-info"> Редактировать</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'main/temp.html' %}
+
+{% block title %}Фильмы{% endblock %}
+
+{% block content %}
+    <div class="mainline">
+        <h1>Список фильмов</h1>
+    </div>
+
+    {% for el in films %}
+        <div>
+            <a href="{% url 'films_detail' el.id %}">
+                <img src="{{ el.Image_of_film.url }}" class="image-preview" alt='{{ el.Name_of_film }}'>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

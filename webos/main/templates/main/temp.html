@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>{% block title %}Главная страница{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<body>
+    <header class="main_header">
+        <img src="{% static 'main/img/1697636052080_300x138.png' %}" alt='Уллубий' width="100px">
+        <a href='{% url "home" %}'><i class="fas fa-home"></i> Главная</a>
+        <a href='{% url "films_home" %}'><i class="fas fa-address-card"></i> Фильмы</a>
+        <a href='{% url "serials_home" %}'><i class="fas fa-tags"></i> Сериалы</a>
+        <a href=''><i class="fas fa-paper-plane"></i> Мультфильмы</a>
+        <a href='{% url 'create' %}'><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить запись</button></a>
+
+        <form method="GET" action="search/" class="search_field">
+            <label>
+                <input type="text" name="q" placeholder="Введите запрос">
+            </label>
+            <button type="submit" name="submit">Поиск</button>
+        </form>
+
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
